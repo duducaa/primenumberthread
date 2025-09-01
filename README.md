@@ -1,0 +1,3 @@
+le o arquivo e transforma em um array, do qual cada thread pega um bloco de tamanho array_size / n (nem todos terão o mesmo tamanho). Quando uma thread verifica seus números, espera as outras terminarem para garantir a mesma ordem do arquivo.
+
+Como é possível ver, conforme o número de threads vai aumentando, o speed up em relação ao base é maior, mas o speed up em relação à quantidade anterior de threads é menor, uma vez que o problema deixa de ser o tempo de execução do problema e passa a ser o overhead e a parte de I/O, que não é paralelizável
